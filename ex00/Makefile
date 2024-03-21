@@ -1,4 +1,4 @@
-NAME = ..
+NAME = ex00
 CC =  c++ -Wall -Wextra -Werror -std=c++98 
 RM = rm -rf
 FILE = main.cpp
@@ -9,7 +9,7 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	$(CC) $(OBJ) -o $@
 
-%.o : %.cpp ..
+%.o : %.cpp easyfind.hpp
 	$(CC) -c $< -o $@ 
 
 clean :
