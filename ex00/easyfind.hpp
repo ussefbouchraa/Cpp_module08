@@ -6,7 +6,7 @@
 /*   By: ussef <ussef@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 07:15:25 by ybouchra          #+#    #+#             */
-/*   Updated: 2024/03/21 17:00:37 by ussef            ###   ########.fr       */
+/*   Updated: 2024/03/22 12:04:05 by ussef            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,10 @@
 
 template <typename T>
 void easyfind(T container, int value)
-{
-    
-    typename T::iterator it;
-    for( it = container.begin(); it != container.end(); it++){
-        if (*it == value) {
-            std::cout << "Item is Found ." << std::endl;
-            return;
-        }
-    }
-        throw(std::exception()); 
+{   
+        if (std::find(container.begin(), container.end(), value) != container.end()) 
+            std::cout << "Item Found ." << std::endl;
+        else
+            throw(std::exception()); 
 
 }
