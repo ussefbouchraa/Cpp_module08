@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ussef <ussef@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ybouchra <ybouchra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 07:33:07 by ussef             #+#    #+#             */
-/*   Updated: 2024/03/23 17:36:36 by ussef            ###   ########.fr       */
+/*   Updated: 2024/03/24 09:44:53 by ybouchra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,24 +33,24 @@ int main()
         std::cout << *it << std::endl;
         ++it;
     }
-    // std::stack<int> s(mstack);
+    std::stack<int> s1(mstack);
     // return 0;
 
 std::cout <<"-----------------------------\n";
 
-    std::list<int> m;
-    m.push_back(5);
-    m.push_back(17);
-    std::cout << m.back() << std::endl;
-    m.pop_back();
-    std::cout << m.size() << std::endl;
-    m.push_back(3);
-    m.push_back(5);
-    m.push_back(737);
+    std::list<int> lst;
+    lst.push_back(5);
+    lst.push_back(17);
+    std::cout << lst.back() << std::endl;
+    lst.pop_back();
+    std::cout << lst.size() << std::endl;
+    lst.push_back(3);
+    lst.push_back(5);
+    lst.push_back(737);
     //[...]
-    m.push_back(0);
-    std::list<int>::iterator it1 = m.begin();
-    std::list<int>::iterator it2 = m.end();
+    lst.push_back(0);
+    std::list<int>::iterator it1 = lst.begin();
+    std::list<int>::iterator it2 = lst.end();
     ++it1;
     --it1;
     while (it1 != it2)
@@ -58,6 +58,6 @@ std::cout <<"-----------------------------\n";
         std::cout << *it1 << std::endl;
         ++it1;
     }
-    // std::stack<int> s(m);
-    // return 0;
+        std::stack<int> s2(mstack);
+    return 0;
 }
