@@ -3,20 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ussef <ussef@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ybouchra <ybouchra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 13:10:29 by ussef             #+#    #+#             */
-/*   Updated: 2024/03/22 11:57:00 by ussef            ###   ########.fr       */
+/*   Updated: 2024/03/24 02:01:44 by ybouchra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "easyfind.hpp"
+#include <array>
 
 
 
 int main()
 {
-
+        
+    try
+    {
+        std::array <int, 3> arr = {400, 500, 600};
+        easyfind<std::array<int, 3> >(arr, 50);
+    }
+    catch(const std::exception& ex)
+    {
+        std::cerr<< "Item Not Found ." << '\n';
+    }
+    
+    std::cout << "-------------------------\n";
     
     try
     {
@@ -44,5 +56,8 @@ int main()
     {
         std::cerr<< "Item Not Found ." << '\n';
     }
+    
+
+
     
 }
