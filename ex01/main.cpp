@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ussef <ussef@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ybouchra <ybouchra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 18:06:59 by ussef             #+#    #+#             */
-/*   Updated: 2024/03/22 17:02:03 by ussef            ###   ########.fr       */
+/*   Updated: 2024/03/25 09:49:10 by ybouchra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int main()
         sp.addNumber(9);
         sp.addNumber(11);
 
-     std::cout << sp.shortestSpan() << std::endl;
-        std::cout << sp.longestSpan() << std::endl;
+        std::cout << "Shortest Span is: "<< sp.shortestSpan() << std::endl;
+        std::cout << "Longest Span is: "  << sp.longestSpan() << std::endl;
     }
     catch(const char* e)
     {
@@ -36,16 +36,24 @@ int main()
     try
     {
         std::vector<int> v;
-        Span S(100);
-        for(int i = 0; i < 100; i++)
-            v.push_back(i);
+        // for(int i = 0; i < 5; i++)
+        //     v.push_back(i);
+      v.push_back(1);
+      v.push_back(2);
+      v.push_back(3);
 
-        S.addNumber(v.begin(), v.end());
-        std::cout << S.shortestSpan() << std::endl;
-        std::cout << S.longestSpan() << std::endl;
+        Span S(5);
+        S.addNumber(v);
+        
+        // std::vector<int>::iterator it1 = v.begin();
+        // for(; it1 != v.end(); it1++)
+        //     std::cout << "*** "<< *it1 <<std::endl;
+
+        std::cout << "Shortest Span is: "<< S.shortestSpan() << std::endl;
+        std::cout << "Longest Span is: " <<S.longestSpan() << std::endl;
     }catch(const char *e)
     {
-        std::cout << *e << std::endl;
+        std::cout << e << std::endl;
     }
     
 return 0;

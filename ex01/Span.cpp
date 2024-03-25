@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ussef <ussef@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ybouchra <ybouchra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 18:07:49 by ussef             #+#    #+#             */
-/*   Updated: 2024/03/22 17:00:26 by ussef            ###   ########.fr       */
+/*   Updated: 2024/03/25 09:49:05 by ybouchra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,8 @@ Span::~Span()
 }
 void Span::addNumber(int nbr)
 {
-    
-    if(vec_numbers.size() > N)
-        throw(std::exception());
+    if(vec_numbers.size() >= N)
+        throw "Err: Out of Range ";
     this->vec_numbers.push_back(nbr);
 }
 
@@ -67,16 +66,15 @@ int Span::shortestSpan()
     return min_span;
 }
 
-   void Span::addNumber(std::vector<int>::iterator it1, std::vector<int>::iterator it2)
+   void Span::addNumber( std::vector<int> v)
     {
-      if(this->vec_numbers.size() >= this->N)
-        throw "Err: Out of Range ";
-      this->vec_numbers.insert(this->vec_numbers.begin(), it1, it2);
-    } 
 
-    //    void Span::addN(std::vector<int> v)
-    // {
-    //   if(this->vec_numbers.size() >= this->N)
-    //     throw "Err: Out of Range ";
-    //   this->vec_numbers.insert(this->vec_numbers.begin(), v.begin(), v.end());
-    // } 
+        
+            if(v.size() > this->N )
+                throw "Err: Out of Range ";
+            this->vec_numbers.insert(this->vec_numbers.begin(), v.begin(), v.end());
+
+        // std::vector<int>::iterator it1 = this->vec_numbers.begin();
+        // for(; it1 != this->vec_numbers.end(); it1++)
+        //     std::cout << "*** "<< *it1 <<std::endl;
+    }

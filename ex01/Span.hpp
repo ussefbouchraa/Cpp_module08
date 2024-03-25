@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ussef <ussef@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ybouchra <ybouchra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 18:09:06 by ussef             #+#    #+#             */
-/*   Updated: 2024/03/22 17:01:28 by ussef            ###   ########.fr       */
+/*   Updated: 2024/03/25 09:26:05 by ybouchra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,5 @@ public:
     void addNumber(int nbr);
     int shortestSpan();
     int longestSpan();
-    void addNumber(std::vector<int> ::iterator it1, std::vector<int>:: iterator it2);
-   
-    // void Span::addN(std::vector<int> v);
+    void addNumber( std::vector<int> v);
 };
