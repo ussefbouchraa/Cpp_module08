@@ -6,7 +6,7 @@
 /*   By: ybouchra <ybouchra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 18:06:59 by ussef             #+#    #+#             */
-/*   Updated: 2024/03/26 01:29:20 by ybouchra         ###   ########.fr       */
+/*   Updated: 2024/03/26 01:57:55 by ybouchra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,6 @@ int main()
             v.push_back(i);
         Span S(100);
         S.addNumber(v); 
-
-     
 
         std::cout << "Shortest Span is: "<< S.shortestSpan() << std::endl;
         std::cout << "Longest Span is: " <<S.longestSpan() << std::endl;
