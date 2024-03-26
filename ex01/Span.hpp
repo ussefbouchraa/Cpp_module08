@@ -6,7 +6,7 @@
 /*   By: ybouchra <ybouchra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 18:09:06 by ussef             #+#    #+#             */
-/*   Updated: 2024/03/25 09:26:05 by ybouchra         ###   ########.fr       */
+/*   Updated: 2024/03/26 01:16:29 by ybouchra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ public:
     Span& operator=(const Span &rhs);
     ~Span();
     
-    void addNumber(int nbr);
+    void addNumber(long nbr);
     int shortestSpan();
     int longestSpan();
     void addNumber( std::vector<int> v);

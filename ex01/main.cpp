@@ -6,7 +6,7 @@
 /*   By: ybouchra <ybouchra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 18:06:59 by ussef             #+#    #+#             */
-/*   Updated: 2024/03/25 09:49:10 by ybouchra         ###   ########.fr       */
+/*   Updated: 2024/03/26 01:29:20 by ybouchra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,18 +36,12 @@ int main()
     try
     {
         std::vector<int> v;
-        // for(int i = 0; i < 5; i++)
-        //     v.push_back(i);
-      v.push_back(1);
-      v.push_back(2);
-      v.push_back(3);
+        for(int i = 0; i < 100; i++)
+            v.push_back(i);
+        Span S(100);
+        S.addNumber(v); 
 
-        Span S(5);
-        S.addNumber(v);
-        
-        // std::vector<int>::iterator it1 = v.begin();
-        // for(; it1 != v.end(); it1++)
-        //     std::cout << "*** "<< *it1 <<std::endl;
+     
 
         std::cout << "Shortest Span is: "<< S.shortestSpan() << std::endl;
         std::cout << "Longest Span is: " <<S.longestSpan() << std::endl;

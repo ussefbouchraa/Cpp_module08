@@ -6,7 +6,7 @@
 /*   By: ybouchra <ybouchra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 18:07:49 by ussef             #+#    #+#             */
-/*   Updated: 2024/03/25 09:49:05 by ybouchra         ###   ########.fr       */
+/*   Updated: 2024/03/26 01:26:47 by ybouchra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,10 @@ Span& Span::operator=(const Span &rhs)
 Span::~Span()
 {
 }
-void Span::addNumber(int nbr)
+void Span::addNumber(long nbr)
 {
+    if( nbr > std::numeric_limits<int>::max() || nbr < std::numeric_limits<int>::min() )
+            throw "Err: Out_Of_Limits_Int .";
     if(vec_numbers.size() >= N)
         throw "Err: Out of Range ";
     this->vec_numbers.push_back(nbr);
@@ -69,8 +71,7 @@ int Span::shortestSpan()
    void Span::addNumber( std::vector<int> v)
     {
 
-        
-            if(v.size() > this->N )
+            if(v.size() + this->vec_numbers.size() > this->N )
                 throw "Err: Out of Range ";
             this->vec_numbers.insert(this->vec_numbers.begin(), v.begin(), v.end());
 
